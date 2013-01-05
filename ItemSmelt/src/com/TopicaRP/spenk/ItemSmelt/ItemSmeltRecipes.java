@@ -37,7 +37,7 @@ public class ItemSmeltRecipes {
 		/**for (Recipe recip : toret){
 			Bukkit.addRecipe(recip);
 		}*/
-		Logger.getLogger("minecraft").info("all recipes are reloaded!");
+		Logger.getLogger("minecraft").info("all recipes are reloaded!");//TODO void not ready yet!
 	}
 	
 	public void loadRecipes(){

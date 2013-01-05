@@ -4,7 +4,6 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 public class FurnaceRecipes {
-	
 	public int fromID;
 	public short fromDamage;
 	public int toID;
