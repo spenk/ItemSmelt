@@ -49,7 +49,6 @@ public class ItemSmelt extends JavaPlugin {
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (label.equalsIgnoreCase("ismelt")){
-			
 			if (!perms.has(sender, "ItemSmelt.admin")){
 				sender.sendMessage("§cYou are not allowed to use this command!");
 				return true;
@@ -86,7 +85,6 @@ public class ItemSmelt extends JavaPlugin {
 							fromDamage = Short.parseShort(args[1].split("/")[1]);
 						}
 						ItemSmeltFile r = new ItemSmeltFile(fromID, fromDamage,0,(short)0);
-						ItemSmeltRecipes handler = new ItemSmeltRecipes();
 						if (r.existsRecipe()){
 							r.removeRecipe();
 							sender.sendMessage("§2Recipe removed.");
@@ -185,11 +183,14 @@ public class ItemSmelt extends JavaPlugin {
 	
     private void help(CommandSender sender)
     {
-      sender.sendMessage("§ciSmelt Commands/ §2/ismelt reload§c - reloads iSmelt config.");
-      sender.sendMessage("§2/ismelt add (from id)/(from damage) (to id)/(to damage)§c - adds a new smeltable.");
-      sender.sendMessage("§2/ismelt remove (fromID/fromDamage)§c - removes a smeltable.");
-      sender.sendMessage("§2/ismelt check (from id)§c - checks to see what a smeltable item turns into.");
-      sender.sendMessage("§2/ismelt list§c - lists all smeltables added by iSmelt.");
+      sender.sendMessage("§ciSmelt Commands");
+      sender.sendMessage("§c/ismelt add (from id)/(from damage) (to id)/(to damage)§a - adds a new smeltable.");
+      sender.sendMessage("§c/ismelt reload§a - reloads iSmelt config.");
+      sender.sendMessage("§4Needs restart to take effect {");
+      sender.sendMessage("§c/ismelt remove (fromID/fromDamage)§a - removes a smeltable.");
+      sender.sendMessage("§4                              }");
+      sender.sendMessage("§c/ismelt check (from id)§a - checks to see what a smeltable item turns into.");
+      sender.sendMessage("§c/ismelt list§a - lists all smeltables added by iSmelt.");
     }
 	
 }
