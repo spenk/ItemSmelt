@@ -88,7 +88,6 @@ public class ItemSmelt extends JavaPlugin {
 						ItemSmeltFile r = new ItemSmeltFile(fromID, fromDamage,0,(short)0);
 						ItemSmeltRecipes handler = new ItemSmeltRecipes();
 						if (r.existsRecipe()){
-							handler.removeRecipe(r.getFullRecipe());
 							r.removeRecipe();
 							sender.sendMessage("§2Recipe removed.");
 							return true;
