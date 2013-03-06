@@ -14,7 +14,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class ItemSmelt extends JavaPlugin {
 
 	public String name = "ItemSmelt";
-	public double version = 1.0;
+	public double version = 1.1;
 	public Logger log = Logger.getLogger("Minecraft");
 	public Permission perms = null;
 	ItemSmeltFile f = new ItemSmeltFile();
@@ -183,14 +183,27 @@ public class ItemSmelt extends JavaPlugin {
 	
     private void help(CommandSender sender)
     {
+      sender.sendMessage(" ");
+      sender.sendMessage(" ");
+      sender.sendMessage(" ");
       sender.sendMessage("§ciSmelt Commands");
-      sender.sendMessage("§c/ismelt add (from id)/(from damage) (to id)/(to damage)§a - adds a new smeltable.");
-      sender.sendMessage("§c/ismelt reload§a - reloads iSmelt config.");
-      sender.sendMessage("§4Needs restart to take effect {");
-      sender.sendMessage("§c/ismelt remove (fromID/fromDamage)§a - removes a smeltable.");
-      sender.sendMessage("§4                              }");
-      sender.sendMessage("§c/ismelt check (from id)§a - checks to see what a smeltable item turns into.");
-      sender.sendMessage("§c/ismelt list§a - lists all smeltables added by iSmelt.");
+      sender.sendMessage("§aadd a new smeltable:");
+      sender.sendMessage("§c/ismelt add from id(/from data) to id(/to damage).");
+      sender.sendMessage("§4Note:§o Fromdata doesnt work on bukkit < 1.2.5");
+      sender.sendMessage(" ");
+      sender.sendMessage("§areload the iSmelt config files/recipes:");
+      sender.sendMessage("§c/ismelt reload.");
+      sender.sendMessage(" ");
+      sender.sendMessage("§acheck to see what a smeltable item turns into:");
+      sender.sendMessage("§c/ismelt check (from id).");
+      sender.sendMessage(" ");
+      sender.sendMessage("§aCheck all smeltable items added by ismelt:");
+      sender.sendMessage("§c/ismelt list.");
+      sender.sendMessage(" ");
+      sender.sendMessage("§aDelete a recipe from the smelt table:");
+      sender.sendMessage("§c/ismelt remove fromID(/fromData).");
+      sender.sendMessage("§4Note:§o needs restart to take effect");
+
     }
 	
 }

@@ -1,8 +1,8 @@
 name: ItemSmelt
 main: com.TopicaRP.spenk.ItemSmelt.ItemSmelt
 author: Spenk
-version: 1.0
+version: 1.1
 commands:
-    thd:
-        ismelt: manages furnace recipes
-        usage: /ismelt - to see all ismelt commands
+    ismelt:
+        description: /ismelt to add an item smelt recipe or for further help.
+        usage: /ismelt to add an item smelt recipe or for further help.

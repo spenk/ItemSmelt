@@ -26,11 +26,12 @@ public class ItemSmeltFile {
 	PropertiesFile f = new PropertiesFile("plugins/config/ItemSmelt.txt");
 	
 	public void createFiles(){
+		File file = new File("plugins/config");
 		File f = new File("plugins/config/ItemSmelt.txt");
 		if (!f.exists()){
-			f.mkdirs();
+			file.mkdirs();
 			try {
-				f.createNewFile();
+				file.createNewFile();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

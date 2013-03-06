@@ -20,10 +20,10 @@ public class FurnaceRecipes {
 	
 	public ItemStack getReturnItem() {
 		ItemStack result;
-		if (toDamage != -1) {
-			result = new ItemStack(toID, 1, toDamage);
-		} else {
+		if (toDamage == -1) {
 			result = new ItemStack(toID, 1);
+		} else {
+			result = new ItemStack(toID, 1, toDamage);
 		}
 		return result;
 	}

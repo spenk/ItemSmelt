@@ -19,7 +19,7 @@ public class ItemSmeltRecipes {
 	public void loadRecipes(){
 		ItemSmeltParseRecipes recipes = new ItemSmeltParseRecipes();
 		for(FurnaceRecipes r : recipes.parseRecipes()){
-			Logger.getLogger("minecraft").info(r.getBurnMaterial() +" "+r.getBurnMaterialData()+" "+r.getReturnItem().getTypeId()+" "+r.getReturnItem().getDurability());
+			Logger.getLogger("minecraft").info(r.getBurnMaterial() +" "+r.getBurnMaterialData()+" = "+r.getReturnItem().getTypeId()+" "+r.getReturnItem().getDurability());
 			if (r.getBurnMaterialData() == -1){
 			Bukkit.addRecipe(new FurnaceRecipe(r.getReturnItem(),r.getBurnMaterial()));
 			}else{
